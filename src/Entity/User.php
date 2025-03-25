@@ -35,7 +35,7 @@ use Symfony\Component\Validator\Constraints as Assert;
             denormalizationContext: ['groups' => ['user:update']],
             security: RoleEnum::IS_ADMIN_OR_USER_OBJECT
         ),
-        new Delete(security: RoleEnum::IS_GRANTED_ADMIN),
+        new Delete(security: RoleEnum::IS_ADMIN_OR_AUTHOR_OBJECT),
     ]
 )]
 #[ApiFilter(SearchFilter::class, properties: ['email' => 'partial'])]
