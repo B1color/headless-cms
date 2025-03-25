@@ -44,4 +44,8 @@ class RoleEnum
      * @var string
      */
     public const IS_GRANTED_ADMIN_OR_AUTHOR = "is_granted('ROLE_ADMIN') or is_granted('ROLE_AUTHOR')";
+    /**
+     * @var string
+     */
+    public const IS_GRANTED_ADMIN_OR_USER = "is_granted('ROLE_ADMIN') or user == object";
 }
